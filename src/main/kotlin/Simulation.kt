@@ -23,7 +23,7 @@ class DoublePendulumSimulationApp : ApplicationAdapter() {
     }
 
     override fun render() {
-        val dt = Gdx.graphics.deltaTime.toDouble() * 6
+        val dt = Gdx.graphics.deltaTime.toDouble() * 5
         val state = doubleArrayOf(pendulum.theta1, pendulum.theta2, pendulum.p1, pendulum.p2)
         val newState = rungeKutta4(state, pendulum.equations(), dt)
         pendulum.theta1 = newState[0]
